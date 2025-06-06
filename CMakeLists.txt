@@ -59,6 +59,7 @@ if (build_static_lib)
 
         require_cpp14()
         add_library(easyloggingpp STATIC src/easylogging++.cc)
+        target_include_directories(easyloggingpp PUBLIC src)
         set_property(TARGET easyloggingpp PROPERTY POSITION_INDEPENDENT_CODE ON)
 
         install(TARGETS
